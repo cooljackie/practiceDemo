@@ -6,6 +6,9 @@ import PEGame from '@/components/体育老师题目/PEGame'
 import goHome from '@/components/度度熊回家/goHome'
 import maozi from '@/components/买帽子/maozi'
 import quickSort from '@/components/快速排序/quickSort'
+import playBall from '@/components/抛小球/playBall'
+import strReplace from '@/components/字符串替换/strReplace'
+import wuziqi from '@/components/五子棋/wuziqi'
 
 Vue.use(Router)
 
@@ -40,6 +43,21 @@ export default new Router({
       path: '/quickSort',
       name: 'quickSort',
       component: quickSort
+    },
+    {
+      path: '/playBall',
+      name: 'playBall',
+      component: playBall
+    },
+    {
+      path: '/strReplace',
+      name: 'strReplace',
+      component: strReplace
+    },
+    {
+      path: '/wuziqi',
+      name: 'wuziqi',
+      component: wuziqi
     }
   ]
 })
