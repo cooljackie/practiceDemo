@@ -9,6 +9,7 @@
       <button @click="blackStart" id="blackStart">黑棋先行开始</button>
       <button @click="whiteStart" id="whiteStart">白棋先行开始</button>
       <button @click="restart">重新开始</button>
+      <button @click="regret">悔棋</button>
     </div>
   </div>
 </template>
@@ -18,7 +19,8 @@ const map = new Map()
     data () {
       return {
         blackFirst: true,
-        startGame: false
+        startGame: false,
+        memory: []
       }
     },
     methods: {
@@ -46,6 +48,7 @@ const map = new Map()
             this.startGame=false
           }
         }
+        this.memory.push(item)
         this.blackFirst = !this.blackFirst
       },
       blackStart () {
@@ -71,6 +74,20 @@ const map = new Map()
           map.clear()
           document.getElementById("blackStart").disabled=false
           document.getElementById("whiteStart").disabled=false
+        }
+      },
+      regret () {
+        if(this.memory.length === 0){
+          alert('已无棋可悔')
+        }else{
+          let str = this.blackFirst?"是否同意白方悔棋?":"是否同意黑方悔棋?"
+            if(confirm(str)){
+              let num = this.memory.pop()
+              map.delete(num)
+              let box = document.querySelectorAll(".chess-box")[num-1]
+              box.removeChild(box.firstChild)
+              this.blackFirst = !this.blackFirst
+          }
         }
       },
       isWin (num,isBlack) {

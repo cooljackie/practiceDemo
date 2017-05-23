@@ -9,6 +9,8 @@ import quickSort from '@/components/快速排序/quickSort'
 import playBall from '@/components/抛小球/playBall'
 import strReplace from '@/components/字符串替换/strReplace'
 import wuziqi from '@/components/五子棋/wuziqi'
+import waterFall from '@/components/瀑布流布局/waterFall'
+import master from '@/components/推拉门特效/master'
 
 Vue.use(Router)
 
@@ -58,6 +60,16 @@ export default new Router({
       path: '/wuziqi',
       name: 'wuziqi',
       component: wuziqi
+    },
+    {
+      path: '/waterFall',
+      name: 'waterFall',
+      component: waterFall
+    },
+    {
+      path: '/master',
+      name: 'master',
+      component: master
     }
   ]
 })
