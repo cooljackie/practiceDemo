@@ -11,6 +11,9 @@ import strReplace from '@/components/字符串替换/strReplace'
 import wuziqi from '@/components/五子棋/wuziqi'
 import waterFall from '@/components/瀑布流布局/waterFall'
 import master from '@/components/推拉门特效/master'
+import gallery from '@/components/3D幻灯片切换/gallery3D'
+import dance from '@/components/仿劲舞团公测好礼/dance'
+import fullpage from '@/components/全屏网站/fullpage'
 
 Vue.use(Router)
 
@@ -70,6 +73,21 @@ export default new Router({
       path: '/master',
       name: 'master',
       component: master
+    },
+    {
+      path: '/gallery',
+      name: 'gallery',
+      component: gallery
+    },
+    {
+      path: '/dance',
+      name: 'dance',
+      component: dance
+    },
+    {
+      path: '/fullpage',
+      name: 'fullpage',
+      component: fullpage
     }
   ]
 })

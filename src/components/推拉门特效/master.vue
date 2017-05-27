@@ -29,7 +29,7 @@ export default{
         if(i<=index){
           this.startMove(oLis[i],{left: i*30})
         }else{
-          this.startMove(oLis[i],{left: 470 - 120 + (i-1)*30})
+          this.startMove(oLis[i],{left: 470 + (i-1)*30})
         }
       }
     },
@@ -48,7 +48,7 @@ export default{
 
           if(attr === 'opacity') {
             if(Math.round(parseFloat(_this.getStyle(obj,attr))*100)===0){
-              iCur = Math.round(parseFloat(_this.getStyle(obj,attr))*100)
+              iCur = 0
             }else{
               icur = Math.round(parseFloat(_this.getStyle(obj,attr))*100) || 100
             }
