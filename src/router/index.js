@@ -14,6 +14,10 @@ import master from '@/components/推拉门特效/master'
 import gallery from '@/components/3D幻灯片切换/gallery3D'
 import dance from '@/components/仿劲舞团公测好礼/dance'
 import fullpage from '@/components/全屏网站/fullpage'
+import father from '@/components/子组件传值给父组件/father'
+import doubleFly from '@/components/双飞翼布局/doubleFly'
+import percentLoad from '@/components/canvas/百分比加载/percentLoad'
+import matrix from '@/components/canvas/黑客帝国/matrix'
 
 Vue.use(Router)
 
@@ -88,6 +92,26 @@ export default new Router({
       path: '/fullpage',
       name: 'fullpage',
       component: fullpage
+    },
+    {
+      path: '/percentLoad',
+      name: 'percentLoad',
+      component: percentLoad
+    },
+    {
+      path: '/matrix',
+      name: 'matrix',
+      component: matrix
+    },
+    {
+      path: '/father',
+      name: 'father',
+      component: father
+    },
+    {
+      path: '/doubleFly',
+      name: 'doubleFly',
+      component: doubleFly
     }
   ]
 })
